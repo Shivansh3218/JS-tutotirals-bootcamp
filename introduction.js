@@ -33,6 +33,7 @@ let ankush = {
   role: "Manager",
 };
 
+
 console.log(manoj.role, "This is Manoj's role");
 
 console.log(ankush.role, "This is Ankush's role");
