@@ -6,10 +6,10 @@ let string = "hello";
 // 3. Boolean => true, false;
 // 4. Undefined => undefined;
 // let a;
-//console.log(a); // undefined
+////console.log(a); // undefined
 // 5. Null => null; falsy value
 // let b = null;
-//console.log(b); // null falsy value
+////console.log(b); // null falsy value
 // 6. Object => {key: 'value'}; truthy value
 
 let muktai = {
@@ -18,7 +18,9 @@ let muktai = {
   isMarried: false,
   role: "Software Engineer",
 };
+
 // Object is a collection of key-value pairs. It can store multiple values in a single variable.
+
 let manoj = {
   name: "Manoj",
   age: 30,
@@ -34,9 +36,9 @@ let ankush = {
 };
 
 
-console.log(manoj.role, "This is Manoj's role");
+//console.log(manoj.role, "This is Manoj's role");
 
-console.log(ankush.role, "This is Ankush's role");
+//console.log(ankush.role, "This is Ankush's role");
 
 // 7. Array => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; truthy value
 // Array is a collection of data. It can store multiple values in a single variable.
@@ -59,7 +61,7 @@ let arr = [
   10,
 ];
 
-console.log(arr);
+//console.log(arr);
 
 // Function is a block of code that can be reused. It can take parameters and return value it may not return a value.
 
@@ -79,16 +81,78 @@ function addition(a, b, c) {
 }
 
 //calling a function
-console.log(addition(num, num2, num3),"yhis is a first call");
-console.log(addition(20, 30, 40),"this is a second call");
-console.log(addition(30, 40, 50),"this is a third call");
+//console.log(addition(num, num2, num3),"yhis is a first call");
+//console.log(addition(20, 30, 40),"this is a second call");
+//console.log(addition(30, 40, 50),"this is a third call");
 
 // Function Expression
 let expressedFunction = addition;
 
-console.log(expressedFunction(10, 20, 30),"This is a function expression");
+//console.log(expressedFunction(10, 20, 30),"This is a function expression");
+
 
 // PRIMITVE AND NON PRIMITIVE DATATYPES
 
 // 1. Primitive Datatypes => Number, String, Boolean, Undefined, Null
 // 2. Non Primitive Datatypes => Object, Array, Function
+
+// Primitive Datatypes are immutable. They cannot be changed. If we change the value of a primitive datatype, it will create a new value in the memory.
+
+// Non Primitive Datatypes are mutable. They can be changed. If we change the value of a non primitive datatype, it will not create a new value in the memory.
+
+let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let stringType = "Shivansh"
+array[1]  = "H"
+// console.log(array);
+
+
+//OPERATORS IN JAVASCRIPT
+
+
+// 1. Arithmetic Operators => +, -, **, /, %, ++, --;
+
+
+// console.log(value1+(+value2), "This is addition operator");
+
+
+// 2. Assignment Operators => =, +=, -=, *=, /=, %=, **=;
+
+//3 Comparision operators => ==, ===, !=, !==, >, <, >=, <=;
+
+// let value1 = 1;
+// let value2 = "1";
+// console.log(value1 !== value2, "This is a comparision operator");
+
+// 4. Logical Operators => &&, ||, !;
+
+//! this is called a negation operator
+
+// let value1=1; //number
+// let value2 = "1"; //string
+
+// console.log(value1);
+
+// if(!value1){
+//   console.log("This is a TRUE");
+// }else{
+//   console.log("This is FALSE");
+// }
+
+// Special Operator : typeof operator, ternary operator ??.
+
+//Integers : Numbers
+
+let value1 ="This is a value of value 1"; //number 
+let value2 = "This is a value of value 2"; //string
+//condtion?true:false
+// value1==value2?console.log("This is a TRUE"): console.log("This is FALSE");
+
+let abc = value1??value2;
+console.log(abc);
+
+
+// if(value1===value2){
+//   console.log("This is a TRUE");
+// }else{
+//   console.log("This is FALSE");
+// }
