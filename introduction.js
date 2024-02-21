@@ -1,8 +1,8 @@
 // Datatypes in javascript
-let number = 10.5;
+// let number = 10.5;
 // 1. Number => 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10.5, 10.6, 10.7, 10.8, 10.9, 11;  truthy value
 // 2. String => "Hello", "World", "Hello World", "Hello World 123", "Hello World 123.456"; truthy value
-let string = "hello";
+// let string = "hello";
 // 3. Boolean => true, false;
 // 4. Undefined => undefined;
 // let a;
@@ -35,31 +35,31 @@ let ankush = {
   role: "Manager",
 };
 
-
 //console.log(manoj.role, "This is Manoj's role");
 
 //console.log(ankush.role, "This is Ankush's role");
 
 // 7. Array => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; truthy value
 // Array is a collection of data. It can store multiple values in a single variable.
-let arr = [
-  1,
-  2,
-  3,
-  [1, 2, 23, 4],
-  4,
-  5,
-  "6",
-  7,
-  {
-    name: "Muktai",
-    age: 25,
-    isMarried: false,
-    role: "Software Engineer",
-  },
-  9,
-  10,
-];
+
+// let arr = [
+//   1,
+//   2,
+//   3,
+//   [1, 2, 23, 4],
+//   4,
+//   5,
+//   "6",
+//   7,
+//   {
+//     name: "Muktai",
+//     age: 25,
+//     isMarried: false,
+//     role: "Software Engineer",
+//   },
+//   9,
+//   10,
+// ];
 
 //console.log(arr);
 
@@ -67,9 +67,9 @@ let arr = [
 
 // keywords are reserved words in javascript. They have special meaning in javascript. They cannot be used as variable names, function names, or any other identifiers.
 
-let num = 10;
-let num2 = 20;
-let num3 = 30;
+// let num = 10;
+// let num2 = 20;
+// let num3 = 30;
 
 //parameters are the names listed in the function definition.
 //arguments are the real values passed to the function.
@@ -77,7 +77,7 @@ let num3 = 30;
 // Function Declaration
 
 function addition(a, b, c) {
-    return a+b+c;
+  return a + b + c;
 }
 
 //calling a function
@@ -90,7 +90,6 @@ let expressedFunction = addition;
 
 //console.log(expressedFunction(10, 20, 30),"This is a function expression");
 
-
 // PRIMITVE AND NON PRIMITIVE DATATYPES
 
 // 1. Primitive Datatypes => Number, String, Boolean, Undefined, Null
@@ -102,18 +101,14 @@ let expressedFunction = addition;
 
 let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let stringType = "Shivansh"
-array[1]  = "H"
+array[1] = "H";
 // console.log(array);
-
 
 //OPERATORS IN JAVASCRIPT
 
-
 // 1. Arithmetic Operators => +, -, **, /, %, ++, --;
 
-
 // console.log(value1+(+value2), "This is addition operator");
-
 
 // 2. Assignment Operators => =, +=, -=, *=, /=, %=, **=;
 
@@ -142,17 +137,68 @@ array[1]  = "H"
 
 //Integers : Numbers
 
-let value1 ="This is a value of value 1"; //number 
+let value1 = "This is a value of value 1"; //number
 let value2 = "This is a value of value 2"; //string
+
 //condtion?true:false
 // value1==value2?console.log("This is a TRUE"): console.log("This is FALSE");
 
-let abc = value1??value2;
-console.log(abc);
-
+let abc = value1 ?? value2;
+// console.log(abc);
 
 // if(value1===value2){
 //   console.log("This is a TRUE");
 // }else{
 //   console.log("This is FALSE");
 // }
+
+//SWITCH STATEMENTS
+
+// let a = 4+4+5;
+// switch (a) {
+//   case 6:
+//     console.log("This is a case 1");
+//     break;
+
+//   case 8:
+//     console.log("This is a case 2");
+//     break;
+
+//   default:
+//     console.log("This is a default case");
+//     break;
+// }
+
+// Interaction through javascript: alert, prompt, confirm
+
+// alert("This is an alert box");// notifies the user
+// prompt("This is a prompt box"); //returns anything "string" or number
+// confirm("This is a confirm box"); //returns a boolean
+
+// let value = confirm("Enter Your age");
+
+// console.log(value,"This is the value of the prompt box");
+
+//SCOPES IN JAVSCRIPT : The area of accessibility of a variable is called a scope.
+
+//1. function scope: the variable declared inside the function is called a function scope. var is a function scope variable.
+//2. block scope: the variable declared inside the block is called a block scope. let and const
+//3. global scope: the variable declared outside the function is called a global scope.
+
+//globally declared
+
+
+{
+  let b = 120;
+} // block scope
+// console.log(b);
+
+{
+  let shivanshcar = 10;
+  console.log(shivanshcar);
+}
+
+function Navgurukul (){
+  console.log(shivanshcar)
+}
+Navgurukul()
