@@ -1,4 +1,6 @@
 // for loop, while, do while
+
+//Entry controlled loop:  the condition is checked and then the operation is performed. FOR AND WHILE LOOP
 // for loop
 
 //For Loop
@@ -19,8 +21,7 @@
 //do{
 
 //}while(condition);
-//Entry controlled loop:  the condition is checked and then the operation is performed.
-//EXIT Control Loop :The operation is done and then the condition is checked.
+//EXIT Control Loop :The operation is done and then the condition is checked. Do while loop
 
 // let a = 3;
 // let i = 45;
@@ -29,3 +30,36 @@
 //     console.log("This is a do while loop the value is", i);
 //     i++;
 // }while(i<=a);
+
+
+
+//FOR of loop: It loops through the values of the string or array(iterable object=> Cheez, thing).
+const arr = [1,2,3,54,"string"];
+// console.log(arr[3]);
+// for (let i = 0; i < arr.length; i++) {
+//   console.log(arr[i]+1);
+// }
+
+// for (let i of arr) {
+//   console.log(i+1);
+// }
+
+
+
+//OBJECTS ARE NOT ITERABLE IN JS
+
+//For In loops in JS: It loops through the properties of an object.
+
+// let obj = {
+//   name: "Ankush",
+//   age: 40,
+//   isMarried: true,
+//   role: "Manager",
+// };
+
+// for (let key in obj) {
+//   console.log(key,obj[key]);
+// }
+
+
+//FOR EACH LOOP :  For arrays only

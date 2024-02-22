@@ -179,26 +179,3 @@ let abc = value1 ?? value2;
 
 // console.log(value,"This is the value of the prompt box");
 
-//SCOPES IN JAVSCRIPT : The area of accessibility of a variable is called a scope.
-
-//1. function scope: the variable declared inside the function is called a function scope. var is a function scope variable.
-//2. block scope: the variable declared inside the block is called a block scope. let and const
-//3. global scope: the variable declared outside the function is called a global scope.
-
-//globally declared
-
-
-{
-  let b = 120;
-} // block scope
-// console.log(b);
-
-{
-  let shivanshcar = 10;
-  console.log(shivanshcar);
-}
-
-function Navgurukul (){
-  console.log(shivanshcar)
-}
-Navgurukul()
