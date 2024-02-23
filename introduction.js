@@ -18,6 +18,12 @@ let muktai = {
   isMarried: false,
   role: "Software Engineer",
 };
+let num = 123123123;
+let str = 'The value of num is : num'; 
+// console.log(str);
+let string2 = `This is the value of muktai: ${num}`// Template literals
+// console.log(string2);
+// 
 
 // Object is a collection of key-value pairs. It can store multiple values in a single variable.
 
@@ -34,6 +40,9 @@ let ankush = {
   isMarried: true,
   role: "Manager",
 };
+//JSON
+ankush['role'] = "Software Engineer";
+// console.log(ankush)
 
 //console.log(manoj.role, "This is Manoj's role");
 
@@ -67,9 +76,9 @@ let ankush = {
 
 // keywords are reserved words in javascript. They have special meaning in javascript. They cannot be used as variable names, function names, or any other identifiers.
 
-// let num = 10;
-// let num2 = 20;
-// let num3 = 30;
+let num1 = 10;
+let num2 = 20;
+let num3 = 30;
 
 //parameters are the names listed in the function definition.
 //arguments are the real values passed to the function.
@@ -77,13 +86,14 @@ let ankush = {
 // Function Declaration
 
 function addition(a, b, c) {
+  console.log(a, b, c,d);
   return a + b + c;
 }
 
 //calling a function
-//console.log(addition(num, num2, num3),"yhis is a first call");
-//console.log(addition(20, 30, 40),"this is a second call");
-//console.log(addition(30, 40, 50),"this is a third call");
+// console.log(addition(num1, num2, num3),"yhis is a first call");
+// console.log(addition(20, 30, 40),"this is a second call");
+// console.log(addition(30, 40, 50),"this is a third call");
 
 // Function Expression
 let expressedFunction = addition;
@@ -133,24 +143,27 @@ array[1] = "H";
 //   console.log("This is FALSE");
 // }
 
-// Special Operator : typeof operator, ternary operator ??.
+// Special Operator : typeof operator,? ternary operator ??.
 
 //Integers : Numbers
 
-let value1 = "This is a value of value 1"; //number
-let value2 = "This is a value of value 2"; //string
+let value1 = [] //number
+let value2 = "value 2"; //string
 
-//condtion?true:false
+value1===value2?console.log("This is a TRUE") : console.log("This is FALSE");
+
+
+//condtion?true:false  checks for null and undefined
 // value1==value2?console.log("This is a TRUE"): console.log("This is FALSE");
-
+//let value = false??default
 let abc = value1 ?? value2;
-// console.log(abc);
+// console.log(typeof abc);
 
-// if(value1===value2){
-//   console.log("This is a TRUE");
-// }else{
-//   console.log("This is FALSE");
-// }
+if(value1===value2){
+  console.log("This is a TRUE");
+}else{
+  console.log("This is FALSE","This is used as a comma ");
+}
 
 //SWITCH STATEMENTS
 
@@ -179,3 +192,10 @@ let abc = value1 ?? value2;
 
 // console.log(value,"This is the value of the prompt box");
 
+let x= "5";
+let y = 5;
+if(x==y){
+  console.log(x+y);
+}else{
+  console.log("This is a false statement");
+}
