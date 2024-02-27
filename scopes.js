@@ -20,16 +20,16 @@
 // }
 
 //function scope
-function sum() {
-  if (true) {
-     globalVal = "Accessible anywhere";
-    console.log(globalVal, " This is inside a function");
-  }
-  console.log(globalVal, " THis is inside a block");
-}
+// function sum() {
+//   if (true) {
+//      globalVal = "Accessible anywhere";
+//     console.log(globalVal, " This is inside a function");
+//   }
+//   console.log(globalVal, " THis is inside a block");
+// }
 
-sum();
-console.log(globalVal, " THis is Outside a function and block")
+// sum();
+// console.log(globalVal, " THis is Outside a function and block")
 
 // var fullName="shivansh";
 // function myfullName(){
@@ -45,3 +45,18 @@ console.log(globalVal, " THis is Outside a function and block")
 // const something;
 // something=  "shivansh";
 // console.log(something);
+
+// {
+//   var a = 20;
+
+//   // function sum() {
+//   //   if (true) {
+//   //     var globalVal = "Accessible anywhere";
+//   //     console.log(globalVal, " This is inside a function");
+//   //   }
+//   //   console.log(globalVal, " THis is inside a block");
+//   // }
+// }
+
+// console.log(a)
+

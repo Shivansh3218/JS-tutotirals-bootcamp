@@ -169,11 +169,11 @@ if(value1===value2){
 
 // let a = 4+4+5;
 // switch (a) {
-//   case 6:
+//   case 1:
 //     console.log("This is a case 1");
-//     break;
+//     break;`
 
-//   case 8:
+//   case 2:
 //     console.log("This is a case 2");
 //     break;
 
