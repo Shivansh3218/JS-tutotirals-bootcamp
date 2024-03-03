@@ -28,17 +28,34 @@
 // FUNCTION DECLARATIONS ARE HOISTED, FUNCTION EXPRESSIONS ARE NOT HOISTED.
 
 // sum();
-var abc = undefined;
-abc();
-// When we are declaring a function directly this is called a function declaration.
-function sum() {
-  console.log("THIS IS THE FUNCTION DECLARATION");
+// var abc = undefined;
+// abc();
+// // When we are declaring a function directly this is called a function declaration.
+// function sum() {
+//   console.log("THIS IS THE FUNCTION DECLARATION");
+// }
+
+// //Function expression: When you are expressing a function inside a variable it is called the function expression.
+
+// console.log(abc, "The value of abc"); // It will give undefined
+// abc(); // It will give error BECAUSE THE UNDEFINED CANNOT BE CALLED AS A FUNCTION
+// var abc = function () {
+//   console.log("THIS IS THE FUNCTION EXPRESSION");
+// };
+
+
+//  LET AND CONST DECLARATIONS ARE NOT HOISTED. THEY ARE IN THE TEMPORAL DEAD ZONE.
+// console.log(a); // using this a
+// let a = 10;  // initializing this a===> Temporal dead zone
+// // console.log(a);
+// // console.log(B); // using this a
+// // let b = 10;  // initializing this a===> Temporal dead zone
+// // console.log(b);
+// console.log(some); // using this ""
+// var some = 10;
+
+abc(); // undefined => can you call an undefined variable as a funciton? NO
+
+ var abc = function hoistedFunc(){
+    console.log("This is the hoisted function");
 }
-
-//Function expression: When you are expressing a function inside a variable it is called the function expression.
-
-console.log(abc, "The value of abc"); // It will give undefined
-abc(); // It will give error BECAUSE THE UNDEFINED CANNOT BE CALLED AS A FUNCTION
-var abc = function () {
-  console.log("THIS IS THE FUNCTION EXPRESSION");
-};
