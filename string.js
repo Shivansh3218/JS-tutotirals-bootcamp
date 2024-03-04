@@ -1,3 +1,8 @@
+//JAVASCRIPT IS CASE SENSTIVE LANGUAGE= >IT RECOGNIZES THE DIFFERENCE BETWEEN LOWERCASE AND UPPERCASE LETTERS.
+//password = > Shiuvnahs@1232143 = >shivansh@1232143
+//UPPERCASE LETTERS = > A-Z
+//LOWERCASE LETTERS = > a-z
+
 // String => Primitive data type, "" or '' or ` ${}`, Immutable
 //String Methods.
 
@@ -21,9 +26,9 @@
 // console.log(a.charCodeAt(0), "This is the Unicode of the character at a specified index");
 
 //6. concat() => It is used to join two or more strings. str.concat(string1, string2, string3)
-let text = "Helllo";
+// let text = "Helllo";
 
-let bcs = "World";
+// let bcs = "World";
 
 // console.log(text.concat(" ", bcs), "This is the joined string"); + operator
 
@@ -59,6 +64,19 @@ let bcs = "World";
 // console.log(string.repeat(2), "This is the repeated string");
 
 
-//12. split() => It is used to split a string into an array of substrings. str.split(separator, limit)
-// let string = "Hello World ";
-// console.log(string.split(' '), "This is the split string");
+// //12. split() => It is used to split a string into an array of substrings. str.split(separator, limit)
+// let string = "Hello World  dasfsd fsd sd|fsd|sdfsd" ;
+// let string2 = string.split(" ").join("|");
+// console.log(string2.split("|"), "This is the split string");
+
+//13. includes() => It is used to check whether a string contains a specified value. str.includes(value, start). It returns a boolean value.
+// console.log(string.includes('He',2), "This is the includes string");
+
+
+//14. startsWith() => It is used to check whether a string starts with a specified value. str.startsWith(value, start)
+// console.log(string.startsWith('L',2), "This is the startsWith string");
+
+
+//15. endsWith() => It is used to check whether a string ends with a specified value. str.endsWith(value, length)
+let string = "Hello World";
+// console.log(string.endsWith('o',11), "This is the endsWith string");
