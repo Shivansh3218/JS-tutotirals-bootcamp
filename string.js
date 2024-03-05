@@ -52,7 +52,7 @@
 //replace() => It is used to replace a specified value with another value in a string. str.replace(value1, value2)
 
 // let string = "Hello World";
-// console.log(string.replace("Hello", "Hi"), "This is the replaced string");
+// console.log(string.replace("Hell", "Hi"), "This is the replaced string");
 
 
 //10. replaceAll() => It is used to replace all the occurrences of a specified value with another value in a string. str.replaceAll(value1, value2)
@@ -78,5 +78,5 @@
 
 
 //15. endsWith() => It is used to check whether a string ends with a specified value. str.endsWith(value, length)
-let string = "Hello World";
+// let string = "Hello World";
 // console.log(string.endsWith('o',11), "This is the endsWith string");
