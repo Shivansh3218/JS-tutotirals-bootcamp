@@ -66,7 +66,7 @@
 
 // //12. split() => It is used to split a string into an array of substrings. str.split(separator, limit)
 // let string = "Hello World  dasfsd fsd sd|fsd|sdfsd" ;
-// let string2 = string.split(" ").join("|");
+// let string2 = string.split(" ").join("|"); = >["Hello", "World", "dasfsd", "fsd", "sd|fsd|sdfsd"]
 // console.log(string2.split("|"), "This is the split string");
 
 //13. includes() => It is used to check whether a string contains a specified value. str.includes(value, start). It returns a boolean value.
