@@ -1,34 +1,39 @@
 //Array=> Non primitive data type, index and value pair, Mutable, type of array is object. let arr = [];
+// console.log(""=="")
+// console.log([]==[]) // address is different, reference is different
+
 //1. Shift => It is used to remove the first element from an array. arr.shift()
-//2. Unshift => It is used to add one or more elements to the beginning of an array. arr.unshift()
+//2. Unshift => It is used to add one or more elements to the beginning of an array. arr.unshift();
 // 3. Pop => It is used to remove the last element from an array. arr.pop()
-// 4. Push => It is used to add one or more elements to the end of an array. arr.push()
+// 4. Push => It is used to add one or more elements to the end of an array. arr.push();
 
 //Length property => It is used to return the length of an array. arr.length
-
-// let arr = [1, 2, 3, 4];
-// // console.log(arr.length, "This is the length of an array");
+//////////////0,1,2,3
+// let arr = [1,2,3,4];
+// console.log(arr.length, "This is the length of an array");
 // arr.shift();
-// arr.unshift("0");
+// arr.unshift("new element");
 
 // arr.pop();
 // arr.push("new element");
 // console.log(arr, arr.length,"This is the array after removing the first element");
 
-// //SPECIAL OPERATOR  = > delete operator very poor practice to use it
+// //SPECIAL OPERATOR  = > delete operator,used to delete a value from an array. very poor practice to use it, It wont effect the length of an array.
 
 // delete arr[1];
 // console.log(arr,arr.length, "This is the array after removing the first element");
 
 // let arr = [1, 2, 3, 4];
 
-//toString => It is used to convert an array to a string. arr.toString()
+// toString => It is used to convert an array to a string. arr.toString()
 
 // console.log(typeof arr.toString(),"This is the type" );
 
-//Array.at() => It is used to return the element at a specified index. arr.at(index);
+// Array.at() => It is used to return the element at a specified index. arr.at(index); 
+//arr[index]
 
 // console.log(arr.at(2), "This is the element at a specified index");
+// console.log(arr[2])
 
 //Concat Method => It is used to join two or more arrays. arr.concat(array1, array2, array3)
 
@@ -37,8 +42,8 @@
 
 // console.log(arr.concat(arr2, [5,6,7,8]), "This is the joined array");
 
-//Flat method
-// let arr = [1,2,3,4];
+//Flat method => To flatten an array. arr.flat(depth). It is used to flatten an array to a specified depth. It returns a new array. It does not change the original array.
+// let arr = [1,2,3,4];  //single dimensional array
 // let arr2 = [1,4,[5,6,7,8,[1,2]]]; // depth of array is 2.
 // depth == dimension of the array. [1,2,3] = > depth =1
 //[1,2,[3,4]] => depth = 2
@@ -51,30 +56,32 @@
 // console.log(Array.isArray(arr2));
 
 // let arr2 = [1, 4, [5, 6, 7, 8, [1, 2]], {}, "sasd"];
+// console.log(Array.isArray(arr2[2]));
+
 // for (let i = 0; i < arr2.length; i++) {
 //   // console.log(arr2[i]);
 //   console.log(Array.isArray(arr2[i]));
 // }
 
 
-//Array.slice() => It is used to extract a part of an array and returns a new array. arr.slice(start, end)
+//Array.slice() => It is used to extract a part of an array and returns a new array. arr.slice(start, end) if i dont mention the end it takes the length by default.
 
 // let arr = [1,2,3,4]
-// console.log(arr.slice(1), "This is the sliced array");
+// console.log(arr.slice(1,3), "This is the sliced array");
 
 
 //Array.splice() => It is used to add or remove elements from an array. arr.splice(start index, deleteCount, insert_item1, insert_item2, insert_item3);
 
 // let arr = [1,2,3,4];
-// arr.splice(2,1);
+// arr.splice(2,0,"new value", "new value2", "new value3");
 // console.log(arr, "This is the spliced array");
 // arr[arr.length-2] = "new value";
 // console.log(arr, "This is the updated array");
 
-//Join method => It is used to join all the elements of an array into a string. arr.join(separator)
+//Join method => It is used to join all the elements of an array into a string. arr.join(separator) >> works the same as split method.
 // let arr = ["Hello", "Shivansh", "Ankush", "Rahul"];
 
-// console.log(arr.join(""), "This is the joined string");
+// console.log(arr.join("&&&&&"), "This is the joined string");
 
 //Reverse method => It is used to reverse the elements of an array. arr.reverse()
 
@@ -85,20 +92,33 @@
 
 //Array.sort() => It is used to sort the elements of an array. arr.sort()
 
-// let arr = [2,3,7,3,10];
-// // let strArr = ["Hello", "Shivansh", "Ankush", "Rahul"];
+// let arr = [2,3,7,3,1]; // ascending order => 1,2,3,3,7 descending order => 7,3,3,2,1
+// let strArr = ["Hello", "Shivansh", "Ankush", "Rahul"];
 
-// console.log(arr.sort(), "This is the sorted array");
+// console.log(strArr.sort(), "This is the sorted array");
 // console.log(arr.sort((a,b)=>b-a), "This is the sorted array");  DISCUSS LATER
 
 
 //INDEXOF => It is used to return the index of the first occurrence of a specified value in an array. arr.indexOf(value)
-
+// let arr = [2,3,7,3,1];
 // console.log(arr.indexOf(3), "This is the index of the first occurrence of a specified value in an array");
 
 // console.log(arr.lastIndexOf(3), "This is the index of the last occurrence of a specified value in an array");
 
 
-//Array.includes() => It is used to check whether an array contains a specified value. arr.includes(value, start)
+//Array.includes() => It is used to check whether an array contains a specified value. arr.includes(value, start) it returns a boolean value.
 // let arr = [2,3,7,3,10];
-// console.log(!arr.includes(10), "This is the boolean value");
+// console.log(arr.includes(2,4), "This is the boolean value");
+
+//Array.copyWithin() => It is used to copy array elements within the array. arr.copyWithin(target index, start index, end index). if you don't provide the start and end then it will copy the whole array.
+//target index -=> where you want to paste the copied array
+//start index => from where you want to start copying the array
+//end index => till where you want to copy the array
+
+///////////0,1,2,3,5
+// let arr = ["shivansh", "ankush", "rahul", "manoj", "muktai"];
+
+// let arr = ["A", "B", "C", "D", "E"];
+
+// console.log(arr.copyWithin(1,4), "This is the copied array");
+
