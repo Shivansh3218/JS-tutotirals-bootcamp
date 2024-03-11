@@ -117,8 +117,111 @@
 
 ///////////0,1,2,3,5
 // let arr = ["shivansh", "ankush", "rahul", "manoj", "muktai"];
+// let arr = [1,2,3,4,5,6,7,8];
 
 // let arr = ["A", "B", "C", "D", "E"];
 
-// console.log(arr.copyWithin(1,4), "This is the copied array");
+// console.log(arr.copyWithin(1,6), "This is the copied array");
 
+//Find method => It is used to return the value of the first element in an array that passes a condition. arr.find(callback);
+
+// let arr = [1,2,3,4,5,6,7,8];
+
+// function callback(value){
+//     return value>4;
+// }
+
+// let result = arr.find((value)=>{
+//     console.log("This is running", value)
+//     return value>4;
+// });
+
+// console.log(result, "This is the value of the first element in an array that passes a condition");
+
+
+//Find Index method => It is used to return the index of the first element in an array that passes a condition. arr.findIndex(callback);
+
+
+// let arr = [1,2,3,4,5,6,7,8];
+
+// function callback(value){
+//     return value>4;
+// }
+
+// let result = arr.findIndex((value)=>{
+//     console.log("This is running", value)
+//     return value>4;
+// });
+// console.log(result, "This is the index of the first element in an array that passes a condition");
+
+//findlastIndex => It is used to return the index of the last element in an array that passes a condition. arr.findlastIndex(callback);
+
+//findLast() => It is used to return the value of the last element in an array that passes a condition. arr.findLast(callback);
+
+
+//Map method: It is used to create a new array with the results of calling a function for every array element. arr.map(callback);
+
+
+// let arr = [1,2,3,4,5,6,7,8];
+
+// let resultArr = [];
+// for(let i = 0;i<arr.length;i++){
+//     resultArr.push(arr[i]*2);
+// }
+
+// let resultArrMap = arr.map((val)=>{
+//     console.log("This is running", val);
+//     return val+" this is the value";
+// })
+
+// console.log(resultArrMap, "This is the new array");
+
+
+
+
+
+//Filter method => It is used to create a new array with all the elements that pass a condition. arr.filter(callback);
+
+// let arr = [1,2,3,4];
+
+// let resultArr = [];
+
+// for(let i = 0;i<arr.length;i++){
+//     if(arr[i]%2==0){
+//         resultArr.push(arr[i]);
+//     }
+// }
+
+// let resultArrMap = arr.filter((val)=>{
+//     console.log(val);
+//     return val%2==0;
+// })
+
+// console.log(resultArrMap, "This is the new array");
+
+
+
+
+//Reduce method => It is used to reduce the array to a single value. arr.reduce(callback, initialValue);
+
+//accumulator = jama karna. Accumulating things
+
+let arr = [1,2,3,4,5,6,7,8];
+// let sum = 0;
+
+// for(let i = 0;i<arr.length;i++){
+//     sum+=arr[i];
+// }
+//
+// let arr = [1,2,3,4,5,6,7,8];  acc = 1 curr = 1 => 1*1 = 1
+// console.log(sum, "This is the sum of the array");
+let fun = (accumulator = 24, value)=>{
+    // console.log( accumulator, value);
+    return accumulator*value;  //stored in accumulator
+}
+let sum = arr.reduce(fun,1)
+console.log(sum, "This is the sum of the array");
+
+//0+1 =1
+//1+2 =3
+//3+3 =6
