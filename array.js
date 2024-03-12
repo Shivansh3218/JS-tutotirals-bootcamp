@@ -206,22 +206,70 @@
 
 //accumulator = jama karna. Accumulating things
 
-let arr = [1,2,3,4,5,6,7,8];
-// let sum = 0;
+// let arr = [1,2,3,4,5,6,7,8];
 
-// for(let i = 0;i<arr.length;i++){
-//     sum+=arr[i];
+// arr.splice(arr.length/2,0,"new value3");
+// console.log(arr, "This is the spliced array");
+// // let sum = 0;
+
+// // for(let i = 0;i<arr.length;i++){
+// //     sum+=arr[i];
+// // }
+// //
+// // let arr = [1,2,3,4,5,6,7,8];  acc = 1 curr = 1 => 1*1 = 1
+// // console.log(sum, "This is the sum of the array");
+// let fun = (accumulator = 24, value)=>{
+//     // console.log( accumulator, value);
+//     return accumulator*value;  //stored in accumulator
 // }
-//
-// let arr = [1,2,3,4,5,6,7,8];  acc = 1 curr = 1 => 1*1 = 1
+// let sum = arr.reduce(fun,1)
 // console.log(sum, "This is the sum of the array");
-let fun = (accumulator = 24, value)=>{
-    // console.log( accumulator, value);
-    return accumulator*value;  //stored in accumulator
-}
-let sum = arr.reduce(fun,1)
-console.log(sum, "This is the sum of the array");
 
 //0+1 =1
 //1+2 =3
 //3+3 =6
+
+// let x = 5;
+// let arr = [];
+// arr.length = x;
+// arr.fill(100);
+// console.log(arr);
+
+
+
+//Spread Operator: It is used to spread the elements of an array. It is used to copy the elements of an array. syntax = >  ...arr Desctructuring
+
+// let arr = [1,2,3,4,5,6];
+
+// let newArr = ["A","B","C"] //copying , the address or the memory location is being copied.
+// // newArr[2] = "Hello js"
+// let combinedArr = [...arr, ...newArr];
+// console.log(combinedArr, "This is the combined array");
+
+
+// function sum(a,b,c){
+//     return a+b+c;
+// }
+// let arr = [1,2,3];
+
+// console.log(sum(arr[0],arr[1],arr[2]), "This is the sum of the array");
+// console.log(sum(1,2,3), "This is the sum of the array");
+
+
+
+let arr = [1,2,3,4,5,6];
+let newArr =[...arr,1,12,3,123,14,1423];
+console.log(newArr, "This is the copied array");
+
+
+
+//Rest Operator: It is used to combine the values of into an array.(bundle); syntax = > ...arr Desctructuring
+
+let a = 1
+let b = 2;
+let c = 3;
+function sum(...arr){
+  return arr
+}
+
+// console.log(sum(a,b,c), "This is the sum of the array");
