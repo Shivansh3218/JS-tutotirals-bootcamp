@@ -35,9 +35,9 @@
 
 //FOR of loop: It loops through the values of the string or array(iterable object=> Cheez, thing).
 // const arr = [1,2,3,54,"string"];
-// console.log(arr[3]);
+// // console.log(arr[3]);
 // for (let i = 0; i < arr.length; i++) {
-//   console.log(arr[i]+1);
+//   console.log(arr[i]);
 // }
 
 // for (let i of arr) {
@@ -58,7 +58,7 @@
 // };
 
 // for (let key in obj) {
-//   console.log(key,obj[key]);
+//   console.log(obj[key]);
 // }
 
 
@@ -69,11 +69,11 @@
 //operations on array elements
 
 
-let arr = [1,2,3,4,5,6,7,8];
+// let arr = [1,2,3,4,5,6,7,8];
 
-let resultArr = [];
- let newArr = arr.forEach((value,index)=>{
-    // resultArr.push(value*2);
-    arr[index] = value*2;
-})
-console.log(arr, "This is the new array");
+// let resultArr = [];
+//  let newArr = arr.forEach((value,index)=>{
+//     // resultArr.push(value*2);
+//     arr[index] = value*2;
+// })
+// console.log(arr, "This is the new array");

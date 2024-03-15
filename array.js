@@ -257,19 +257,24 @@
 
 
 
-let arr = [1,2,3,4,5,6];
-let newArr =[...arr,1,12,3,123,14,1423];
-console.log(newArr, "This is the copied array");
+// let arr = [1,2,3,4,5,6];
+// let newArr =[...arr,1,12,3,123,14,1423];
+// console.log(newArr, "This is the copied array");
 
 
 
 //Rest Operator: It is used to combine the values of into an array.(bundle); syntax = > ...arr Desctructuring
 
-let a = 1
-let b = 2;
-let c = 3;
-function sum(...arr){
-  return arr
-}
+// let a = 1
+// let b = 2;
+// let c = 3;
+// function sum(...arr){
+//   return arr
+// }
 
 // console.log(sum(a,b,c), "This is the sum of the array");
+
+// console.log(1 + '1' - 1);
+
+let arr = [1, 2, 3, 4, 5];
+console.log(arr.join("-"));
