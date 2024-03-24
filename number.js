@@ -5,7 +5,7 @@
 //4. toExponential() => It is used to convert a number to exponential notation.
 //5. valueOf() => It is used to return the primitive value of a number.
 
-let a = 12345; // last number is being rounded off into 6
+// let a = 12345; // last number is being rounded off into 6
 // console.log(a.toFixed(2), "This is the exponential notation");
 // console.log(a.toFixed(2), "This is the fixed number of decimal places");
 // console.log(a.toPrecision(2), "This is the fixed number of decimal places");
@@ -32,3 +32,14 @@ let a = 12345; // last number is being rounded off into 6
 // console.log(NaN===NaN)
 // console.log(undefined===undefined)
 // console.log(null===null)
+
+
+// console.log( typeof ('10' + 5));
+
+
+
+let str = "Hello, World!";
+console.log(str.slice(7, 12));
+
+// let str = "Hello, World!";
+// console.log(str.length);

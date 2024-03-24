@@ -54,8 +54,33 @@
 // console.log(some); // using this ""
 // var some = 10;
 
-abc(); // undefined => can you call an undefined variable as a funciton? NO
+// abc(); // undefined => can you call an undefined variable as a funciton? NO
 
- var abc = function hoistedFunc(){
-    console.log("This is the hoisted function");
-}
+//  var abc = function hoistedFunc(){
+//     console.log("This is the hoisted function");
+// }
+
+
+
+
+
+//HOISTING : The declarations are moved to the top of their scope. It is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+// console.log(a); //usage
+// const a = 10;  // they are moved to the temporal dead zone
+
+//function hoisting
+//The function declarations are hoisted to the top of their scope.
+
+
+// function sum() {
+// console.log("This is a function hoisting")
+// }
+
+//The function expressions are not hoisted to the top of their scope.
+
+
+// var sum = ()=>{
+//     console.log("This is a function hoisting")
+// }
+// sum()

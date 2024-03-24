@@ -37,6 +37,7 @@
 //        return this.firstName + " " + this.lastName;
 //   },
 // };
+
 //no parent it is inside the global object
 // function something(){
 //     console.log(this);
@@ -61,7 +62,7 @@
 // let student = {
 //   firstName: "John",
 //   lastName: "Doe",
-//}; //Empty object , object literal
+// }; //Empty object , object literal
 
 // let ankushCar = {
 //     carColor: "Black",
@@ -87,9 +88,10 @@
 //   this.modelName = model;
 //   this.manufactureYear = year;
 // }
+
 // //new keyword is used to create an instance of an object. //constructor function
 
-// let myCar = new Car("Black","BMW Q3",2024)
+// let myCar = new Car("Black","BMW Q3",2024);
 // let ankushCar = new Car("Red","Audi",2022)
 
 // console.log(myCar.carColor);
@@ -151,6 +153,39 @@
 // let values = Object.values(student);
 // console.log(values, "This is values array");
 
-//Object.entries()
+// Object.entries(student)
 // let entries = Object.entries(student);
 // console.log(entries, "This is entries array");
+
+
+//TOPIC == > JSON `JavaScript Object Notation`
+
+//JSON is a lightweight data interchange format. 
+
+
+
+//JSON.parse => It is used to convert a JSON string to a JavaScript object.
+
+
+// let student = '{"firstname":"Shivansh", "lastname":"Rawat", "age":"20"}';
+
+//  student = JSON.parse(student);
+
+//{firstname:"Shivansh", lastname:"Rawat", age:"20"}
+// let arr = "[1,23,4,45,5]"
+// arr = JSON.parse(arr);
+// console.log( arr[2], "This is a string");
+
+// console.log( student, "This is a object");
+
+// //JSON.stringify => It is used to convert a JavaScript object to a JSON string.
+
+// student = JSON.stringify(student);
+
+
+// console.log(student, "This is a string");
+
+
+
+
+
