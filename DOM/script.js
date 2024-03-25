@@ -61,3 +61,64 @@
 //   console.log(add());
 
 // });
+
+
+//DEFER KEYWORD => defer attribute in HTML is used to prevent the script from running until the HTML is fully loaded.
+
+
+// let h1 = document.querySelector('h1');
+// console.log(h1);
+
+// h1.addEventListener('click', () => {
+// console.log('H1 Clicked');
+
+// })
+
+//inner text => returns the text content of an element.
+
+// console.log(document.images)
+// console.log(document.links[2].innerText)
+// console.log(document.all)
+
+
+// let linkText = document.querySelectorAll('a')[2].innerText;
+
+// console.log(linkText)
+
+//InnnerHTML
+
+// let div = document.querySelector('div');
+// console.log(div.innerHTML);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
