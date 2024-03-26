@@ -62,9 +62,7 @@
 
 // });
 
-
 //DEFER KEYWORD => defer attribute in HTML is used to prevent the script from running until the HTML is fully loaded.
-
 
 // let h1 = document.querySelector('h1');
 // console.log(h1);
@@ -77,9 +75,8 @@
 //inner text => returns the text content of an element.
 
 // console.log(document.images)
-// console.log(document.links[2].innerText)
+// console.log(document.links)
 // console.log(document.all)
-
 
 // let linkText = document.querySelectorAll('a')[2].innerText;
 
@@ -88,11 +85,97 @@
 //InnnerHTML
 
 // let div = document.querySelector('div');
-// console.log(div.innerHTML);
+// div.addEventListener("click",()=>{
+//     console.log('Div Clicked');
+// })
+// console.log(div);
+
+
+//DOM MANIPULATION
+
+// let heading = document.querySelector("#heading");
+
+// let button = document.querySelector("#changeBtn");
+
+// //click
+
+// button.addEventListener("click", () => {
+
+// console.log(heading.innerText);
+
+// //heading.innerText = "Hello this is heading 1";
+
+// heading.innerText = "Shivansh"
+
+
+// });
+
+// console.log(document.lastElementChild.lastElementChild.lastElementChild);
+
+
+//METHODS = > getAttribute, setAttribute, removeAttribute
+
+//getAttribute => returns the value of the attribute with the specified name, of an element.
+
+// setAttribute => sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+
+
+//removeAttribute => removes the specified attribute from an element.
 
 
 
 
+//getAttribute => returns the value of the attribute with the specified name, of an element.
+
+// let btnAttribute = document.querySelector("button");
+// let heading =    document.querySelector("h1");
+// let removeBtn = document.querySelector("#remove");
+
+
+// removeBtn.addEventListener("click",()=>{
+//     heading.setAttribute("class","display")
+// })
+
+
+// btnAttribute.addEventListener("click",()=>{
+// heading.setAttribute("class","red")
+// })
+
+// let greenBtn = document.body.getElementsByTagName("button")[1]
+
+// greenBtn.addEventListener("click",()=>{
+//     heading.setAttribute("class","null")
+// });
+
+
+// console.log(greenBtn)
+// console.log(btnAttribute.getAttribute("type"));
+
+
+
+//setAttribute => sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
+
+// btnAttribute.setAttribute("class","no--attribute");
+
+
+
+//removeAttribute => removes the specified attribute from an element.
+
+// btnAttribute.removeAttribute("class");
+
+// console.log(btnAttribute)
+
+
+// let h = document.querySelector("h1");
+
+// let btn = document.querySelector("button");
+
+// let img = document.querySelector("img");
+
+// btn.addEventListener("click",()=>{
+//  h.setAttribute("class","display");
+//     img.setAttribute("class","null");
+// });
 
 
 
