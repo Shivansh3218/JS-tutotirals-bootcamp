@@ -172,11 +172,143 @@
 
 // let img = document.querySelector("img");
 
-// btn.addEventListener("click",()=>{
-//  h.setAttribute("class","display");
-//     img.setAttribute("class","null");
+
+// btn.addEventListener("click",(event)=>{
+
+//     console.log(event)
+
+
 // });
 
+
+//Event Propagation : Event propagation is a mechanism that defines the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a handle for the same event.
+
+
+
+//Event Bubbling : Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element.
+
+
+
+
+
+// let outerChild = document.getElementsByTagName("div")[0];
+// let innerChild = document.getElementsByTagName("div")[1];
+// let btn = document.getElementsByClassName("btn")[0];
+
+
+// outerChild.addEventListener("click",()=>{
+// console.log("Outer Child Clicked");
+// })
+
+// innerChild.addEventListener("click",()=>{
+//     console.log("Inner Child Clicked");
+// })
+
+
+// btn.addEventListener("click",()=>{
+//     console.log("Button Clicked"); 
+// })
+
+
+
+
+//Event Capturing : Event capturing is the event starts from the top of the DOM tree and goes down to the target element. It is also known as trickling.
+
+
+
+// let outerChild = document.getElementsByTagName("div")[0];
+// let innerChild = document.getElementsByTagName("div")[1];
+// let btn = document.getElementsByClassName("btn")[0];
+
+
+// outerChild.addEventListener("click",()=>{
+// console.log("Outer Child Clicked");
+// },true)
+
+// innerChild.addEventListener("click",()=>{
+//     console.log("Inner Child Clicked");
+// },true)
+
+
+// btn.addEventListener("click",()=>{
+//     console.log("Button Clicked"); 
+// },true)
+
+
+
+
+//Stop propagation => stops the bubbling or capturing of an event.
+
+// let outerChild = document.getElementsByTagName("div")[0];
+// let innerChild = document.getElementsByTagName("div")[1];
+// let btn = document.getElementsByClassName("btn")[0];
+
+
+// outerChild.addEventListener("click",()=>{
+// console.log("Outer Child Clicked");
+// })
+
+// innerChild.addEventListener("click",()=>{
+//     console.log("Inner Child Clicked");
+// })
+
+
+// btn.addEventListener("click",(event)=>{
+//     console.log("Button Clicked"); 
+//     event.stopPropagation();
+
+// })
+
+
+
+//Event Delegation => Event delegation allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements.
+
+
+// let ul = document.querySelector("ul");
+
+// ul.addEventListener("click",(event)=>{
+// if(event.target.tagName=="LI"){
+//     console.log(event.target.innerText);
+// }
+
+// })
+
+
+// function add(a,b){
+// console.log(a+b);
+// }
+
+// function substract(a,b){
+//     console.log(a-b);
+
+// }
+// function product(a,b){
+//     console.log(a*b);
+
+// }
+
+// let a = 20
+// let b = 30
+
+// let parentDiv = document.querySelector(".parent");
+
+
+// parentDiv.addEventListener("click",(event)=>{
+
+//     // console.log(event.target.getAttribute("class"));
+
+//     if(event.target.getAttribute("class")=="child1"){
+//         add(a,b)
+//     }
+//    else if(event.target.getAttribute("class")=="child2"){
+//         substract(a,b)
+//     }
+//    else if(event.target.getAttribute("class")=="child3"){
+//         product(a,b)
+//     }
+
+
+// });
 
 
 
