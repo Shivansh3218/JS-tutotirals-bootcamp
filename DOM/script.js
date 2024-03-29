@@ -90,7 +90,6 @@
 // })
 // console.log(div);
 
-
 //DOM MANIPULATION
 
 // let heading = document.querySelector("#heading");
@@ -107,11 +106,9 @@
 
 // heading.innerText = "Shivansh"
 
-
 // });
 
 // console.log(document.lastElementChild.lastElementChild.lastElementChild);
-
 
 //METHODS = > getAttribute, setAttribute, removeAttribute
 
@@ -119,11 +116,7 @@
 
 // setAttribute => sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
-
 //removeAttribute => removes the specified attribute from an element.
-
-
-
 
 //getAttribute => returns the value of the attribute with the specified name, of an element.
 
@@ -131,11 +124,9 @@
 // let heading =    document.querySelector("h1");
 // let removeBtn = document.querySelector("#remove");
 
-
 // removeBtn.addEventListener("click",()=>{
 //     heading.setAttribute("class","display")
 // })
-
 
 // btnAttribute.addEventListener("click",()=>{
 // heading.setAttribute("class","red")
@@ -147,17 +138,12 @@
 //     heading.setAttribute("class","null")
 // });
 
-
 // console.log(greenBtn)
 // console.log(btnAttribute.getAttribute("type"));
-
-
 
 //setAttribute => sets the value of an attribute on the specified element. If the attribute already exists, the value is updated; otherwise a new attribute is added with the specified name and value.
 
 // btnAttribute.setAttribute("class","no--attribute");
-
-
 
 //removeAttribute => removes the specified attribute from an element.
 
@@ -165,36 +151,25 @@
 
 // console.log(btnAttribute)
 
-
 // let h = document.querySelector("h1");
 
 // let btn = document.querySelector("button");
 
 // let img = document.querySelector("img");
 
-
 // btn.addEventListener("click",(event)=>{
 
 //     console.log(event)
 
-
 // });
-
 
 //Event Propagation : Event propagation is a mechanism that defines the order in which event handlers are called when one element is nested inside a second element, and both elements have registered a handle for the same event.
 
-
-
 //Event Bubbling : Event bubbling is a type of event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element in the same nesting hierarchy till it reaches the outermost DOM element.
-
-
-
-
 
 // let outerChild = document.getElementsByTagName("div")[0];
 // let innerChild = document.getElementsByTagName("div")[1];
 // let btn = document.getElementsByClassName("btn")[0];
-
 
 // outerChild.addEventListener("click",()=>{
 // console.log("Outer Child Clicked");
@@ -204,22 +179,15 @@
 //     console.log("Inner Child Clicked");
 // })
 
-
 // btn.addEventListener("click",()=>{
-//     console.log("Button Clicked"); 
+//     console.log("Button Clicked");
 // })
-
-
-
 
 //Event Capturing : Event capturing is the event starts from the top of the DOM tree and goes down to the target element. It is also known as trickling.
 
-
-
 // let outerChild = document.getElementsByTagName("div")[0];
 // let innerChild = document.getElementsByTagName("div")[1];
 // let btn = document.getElementsByClassName("btn")[0];
-
 
 // outerChild.addEventListener("click",()=>{
 // console.log("Outer Child Clicked");
@@ -229,13 +197,9 @@
 //     console.log("Inner Child Clicked");
 // },true)
 
-
 // btn.addEventListener("click",()=>{
-//     console.log("Button Clicked"); 
+//     console.log("Button Clicked");
 // },true)
-
-
-
 
 //Stop propagation => stops the bubbling or capturing of an event.
 
@@ -243,7 +207,6 @@
 // let innerChild = document.getElementsByTagName("div")[1];
 // let btn = document.getElementsByClassName("btn")[0];
 
-
 // outerChild.addEventListener("click",()=>{
 // console.log("Outer Child Clicked");
 // })
@@ -252,17 +215,13 @@
 //     console.log("Inner Child Clicked");
 // })
 
-
 // btn.addEventListener("click",(event)=>{
-//     console.log("Button Clicked"); 
+//     console.log("Button Clicked");
 //     event.stopPropagation();
 
 // })
 
-
-
 //Event Delegation => Event delegation allows you to avoid adding event listeners to specific nodes; instead, the event listener is added to one parent. That event listener analyzes bubbled events to find a match on child elements.
-
 
 // let ul = document.querySelector("ul");
 
@@ -272,7 +231,6 @@
 // }
 
 // })
-
 
 // function add(a,b){
 // console.log(a+b);
@@ -292,7 +250,6 @@
 
 // let parentDiv = document.querySelector(".parent");
 
-
 // parentDiv.addEventListener("click",(event)=>{
 
 //     // console.log(event.target.getAttribute("class"));
@@ -306,34 +263,56 @@
 //    else if(event.target.getAttribute("class")=="child3"){
 //         product(a,b)
 //     }
+// });
 
+//Classlist methods => add, remove, toggle, contains
 
+//add = to add a class with a whitespace in between
+
+//remove =  to remove a class if present
+
+//toggle  = Remove if present, add if not present
+
+//contains = checks if a class is present or not.
+
+// let h1 = document.querySelector("h1");
+
+// let btn = document.querySelector("button");
+
+// btn.addEventListener("click", () => {
+//   h1.classList.add("red");
+// });
+
+// document.getElementsByTagName("button")[1].addEventListener("click", () => {
+//   h1.classList.remove("red");
+// });
+
+// document.getElementsByTagName("button")[2].addEventListener("click", () => {
+//   h1.classList.toggle("red");
+// });
+
+// document.getElementsByTagName("button")[3].addEventListener("click", () => {
+
+//     console.log(h1.classList.contains("red"));
 // });
 
 
+//Create Element => creates an HTML element with the specified tag name.
 
 
+//  let div =  document.createElement("div");
+//  div.classList.add("newDiv");
 
 
+ //AppendChild => appends a node as the last child of a Parent Node.It is a method that is attached to a node that is serving as a parent node and inside the params it takes the child node that you want to append to the parent
 
 
+// document.body.appendChild(div);
 
 
+// document.querySelector("button").addEventListener("click",()=>{
+//    let parentDiv = document.querySelector(".parent");
+//    parentDiv.appendChild(div);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// })
 

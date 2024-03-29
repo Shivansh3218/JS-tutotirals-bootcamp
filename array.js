@@ -178,8 +178,6 @@
 
 
 
-
-
 //Filter method => It is used to create a new array with all the elements that pass a condition. arr.filter(callback);
 
 // let arr = [1,2,3,4];
@@ -198,7 +196,6 @@
 // })
 
 // console.log(resultArrMap, "This is the new array");
-
 
 
 
