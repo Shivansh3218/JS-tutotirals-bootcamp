@@ -234,7 +234,7 @@
 
 
 
-//Spread Operator: It is used to spread the elements of an array. It is used to copy the elements of an array. syntax = >  ...arr Desctructuring
+//Spread Operator: It is used to spread the elements of an array. It is used to copy the elements of an array. syntax = >  ...arr Destructuring
 
 // let arr = [1,2,3,4,5,6];
 
