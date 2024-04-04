@@ -14,6 +14,7 @@ let userObj = {
   email: "",
   password: "",
 };
+
 //Prevent Default => form submission
 
 let submitBtn = document.getElementById("submitBtn");
@@ -38,16 +39,15 @@ let validateForm = (userObj) => {
   }
   if (password.length <= 0) {
     document.getElementById("passwordErrMessage").style.display = "block";
-    document.querySelector("#passwordErrMessage").innerText = "Password should not be empty"
+    document.querySelector("#passwordErrMessage").innerText =
+      "Password should not be empty";
+    flag = false;
+  } else if (password.length <= 8) {
+    document.querySelector("#passwordErrMessage").innerText =
+      "The password's length is not sufficient and please create a stronger password";
+    document.querySelector("#passwordErrMessage").style.display = "block";
     flag = false;
   }
-
-  else if(password.length<=8){
-    document.querySelector("#passwordErrMessage").innerText = "The password's length is not sufficient and please create a stronger password"
-    document.querySelector("#passwordErrMessage").style.display= "block";
-    flag= false
-  }
-
 
   return flag;
 };
@@ -57,12 +57,17 @@ submitBtn.addEventListener("click", function (event) {
   userObj.name = nameInput.value;
   userObj.email = document.getElementById("email").value;
   userObj.password = document.getElementById("password").value;
+  console.log(userObj);
 
-  if (validateForm(userObj)) {
-    console.log(userObj, "This is the user details");
-    window.location.href = `/form-handling/form.html?name=${userObj.name}&email=${userObj.email}&password=${userObj.password}`
-  } else {
-    console.log("Please fill all the fields");
-  }
+  let formDataDiv = document.createElement("div");
+  document.getElementById("form-data").appendChild(formDataDiv);
+  formDataDiv.innerHTML = `<h3>Name: ${userObj.name}</h3> 
+<h3>Email: ${userObj.email}</h3> `;
 
+  //   if (validateForm(userObj)) {
+  //     console.log(userObj, "This is the user details");
+  //     window.location.href = `/form-handling/form.html?name=${userObj.name}&email=${userObj.email}&password=${userObj.password}`
+  //   } else {
+  //     console.log("Please fill all the fields");
+  //   }
 });

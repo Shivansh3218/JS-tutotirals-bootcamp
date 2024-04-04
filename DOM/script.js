@@ -53,14 +53,15 @@
 //   return 12387123 + 12312;
 // }
 
-// button.addEventListener("click", () => {
+//let callbackFn = () => {
 //   // console.log('Button Clicked');
 //   document.body.style.background = "red";
 //   button.style.background = "green";
 //     button.style.color = "white";
 //   console.log(add());
 
-// });
+// }
+// button.addEventListener("click",callbackFn());
 
 //DEFER KEYWORD => defer attribute in HTML is used to prevent the script from running until the HTML is fully loaded.
 
@@ -296,19 +297,16 @@
 //     console.log(h1.classList.contains("red"));
 // });
 
-
 //Create Element => creates an HTML element with the specified tag name.
 
-
-//  let div =  document.createElement("div");
+//  let div =  document.createElement("span");
 //  div.classList.add("newDiv");
+//  div.innerText = "Hello this is a new div";
+//div.innerHTML = "<div>Hello this is a new div</div>"
 
-
- //AppendChild => appends a node as the last child of a Parent Node.It is a method that is attached to a node that is serving as a parent node and inside the params it takes the child node that you want to append to the parent
-
+//AppendChild => appends a node as the last child of a Parent Node.It is a method that is attached to a node that is serving as a parent node and inside the params it takes the child node that you want to append to the parent
 
 // document.body.appendChild(div);
-
 
 // document.querySelector("button").addEventListener("click",()=>{
 //    let parentDiv = document.querySelector(".parent");
