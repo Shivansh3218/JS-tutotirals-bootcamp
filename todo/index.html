@@ -89,7 +89,7 @@
     let ul = document.querySelector('ul');
     let taskArr = [];
 
-    
+
 
     /* let completedTasks = document.getElementsByClassName('completedTask');
      let completedTaskContainer = document.querySelector('.completedTasks_container');
@@ -109,17 +109,18 @@
         taskArr.forEach((task) => {
             let li = document.createElement('li');
             li.innerText = task;
-            li.addEventListener("click",()=>{
+            li.addEventListener("click", () => {
                 li.classList.toggle('completed');
-                
-            loadCompletedTask();
+
+                loadCompletedTask();
             })
             ul.appendChild(li);
         });
     }
 
-    function loadCompletedTask(){
+    function loadCompletedTask() {
         let completedTasks = document.getElementsByClassName('completed');
+        console.log(completedTasks, "this is insided loadCompletedTask function")
 
         //HTML collection received from getElementsByClassName is not an array so we need to convert it into an array
         console.log(completedTasks);
@@ -138,7 +139,7 @@
         if (task === '') {
             alert('Please enter a task');
             return;
-            //console.log("dsfsdfsdf") This will not work due to return keyword
+            console.log("dsfsdfsdf") //This will not work due to return keyword
         }
         taskArr.push(task);
         //console.log(taskArr);

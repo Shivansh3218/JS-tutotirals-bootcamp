@@ -71,3 +71,15 @@ submitBtn.addEventListener("click", function (event) {
   //     console.log("Please fill all the fields");
   //   }
 });
+
+window.addEventListener("load", () => {
+  let arr = JSON.parse(localStorage.getItem("userInput"));
+  console.log(arr);
+  if (arr) {
+    arr.forEach((user) => {
+      let userDetails = document.createElement("div");
+      userDetails.innerHTML = `<h3>Name: ${user}</h3>`;
+      document.body.appendChild(userDetails);
+    });
+  }
+});
