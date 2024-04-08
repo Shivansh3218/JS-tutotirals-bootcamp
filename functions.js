@@ -60,14 +60,14 @@ function callback(result) {
 }
 // console.log(callback());
 
-(function iife(){
-  console.log("IIFE FUNCTION");
-})();
+// (function iife(){
+//   console.log("IIFE FUNCTION");
+// })();
 
 function higherOrder(a, b, iife) {
   let result = a + b;
   // return callback(result);
-  iffe()
+  callback()
 }
 
 console.log(higherOrder(1, 2, iife));
