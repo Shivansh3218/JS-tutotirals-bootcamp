@@ -127,6 +127,57 @@
 
 
 
+//Promise.all => It takes an array of promises and returns a single promise. It is fullfilled when all the promises in the array are fullfilled. If any of the promises in the array is rejected, the promise returned by Promise.all is rejected.
+
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise 1 is fullfilled");
+//     }, 1000);
+// })
+// const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject("Promise 2 is Rejected");
+//     }, 2000);
+// })
+// const promise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise 3 is fullfilled");
+//     }, 3000);
+// })
 
 
+// Promise.all([promise1, promise2, promise3])
+// .then((message)=>{
+//     console.log(message);
+// })
+// .catch((error)=>{
+//     console.log(error)
+// })
 
+
+//Promise.race => It takes an array of promises and returns a single promise. It is fullfilled or rejected as soon as one of the promises in the array is fullfilled or rejected.
+
+
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise 1 is fullfilled");
+//     }, 1000);
+// })
+// const promise2 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject("Promise 2 is Rejected");
+//     }, 500);
+// })
+// const promise3 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("Promise 3 is fullfilled");
+//     }, 3000);
+// })
+
+// Promise.race([promise1, promise2, promise3])
+// .then((message)=>{
+//     console.log(message);
+// })
+// .catch((error)=>{
+//     console.log(error)
+// })  
