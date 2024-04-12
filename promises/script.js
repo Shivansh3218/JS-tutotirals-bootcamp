@@ -21,7 +21,7 @@
 //reject: This is called when the promise is rejected, i.e., the asynchronous operation failed.
 
 // let promise = new Promise((resolve, reject) => {
-//   let a = 1 + 1;
+//   let a = 1 + 5;
 //   if (a == 2) {
 //     resolve("Promise is a Success");
 //   } else {
@@ -181,3 +181,11 @@
 // .catch((error)=>{
 //     console.log(error)
 // })  
+
+
+
+
+
+
+
+
