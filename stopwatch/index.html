@@ -16,7 +16,7 @@
 
         }
 
-        #stop{
+        #stop {
             display: none;
         }
     </style>
@@ -49,9 +49,9 @@
 
         startBtn.addEventListener("click", () => {
             //startBtn.innerText = `${startBtn.innerText === "Start" ? "Pause" : "Start"}`
-            if(startBtn.innerText === "Start"){
-                startBtn.style.display="none"
-                stopBtn.style.display="block"
+            if (startBtn.innerText === "Start") {
+                startBtn.style.display = "none"
+                stopBtn.style.display = "block"
             }
             stopWatchInterval = setInterval(() => {
                 sec++
@@ -59,15 +59,19 @@
                     mins = mins + 1
                     sec = 0
                 }
+                if(mins >10){
+                    hrs = hrs + 1
+                    mins = 0
+                }
                 display.innerText = `${hrs < 10 ? "0" + hrs : hrs}:${mins < 10 ? "0" + mins : mins}:${sec < 10 ? "0" + sec : sec}`
             }, 10)
         })
 
 
         stopBtn.addEventListener("click", () => {
-            if(stopBtn.innerText === "Stop"){
-                startBtn.style.display="block"
-                stopBtn.style.display="none"
+            if (stopBtn.innerText === "Stop") {
+                startBtn.style.display = "block"
+                stopBtn.style.display = "none"
             }
             clearInterval(stopWatchInterval);
             display.innerText = `${hrs < 10 ? "0" + hrs : hrs}:${mins < 10 ? "0" + mins : mins}:${sec < 10 ? "0" + sec : sec}`

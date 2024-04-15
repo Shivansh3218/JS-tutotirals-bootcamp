@@ -41,25 +41,27 @@
 // };
 
 // race();
-let container = document.querySelector(".container");
-let getData = async () => {
-  let data = await fetch("https://reqres.in/api/users?page=1");
-  let response = await data.json();
-  let usersData = response.data;
-//   console.log(response);
 
-          usersData.map((user) => {
-          let html = ` <div class="user">
-            <h1> ${user.first_name + " " + user.last_name} </h1>
-            <h2> ${user.email}</h2>
-            <img src=${user.avatar} alt="">
-            </div>`;
-          container.innerHTML += html;
-        });
-};
+//Difference between a promise and async await is that async await prevents callback hell and makes the code more readable and understandable.
 
-getData();
+// let container = document.querySelector(".container");
+// let getData = async () => {
+//   let data = await fetch("https://reqres.in/api/users?page=1");
+//   let response = await data.json();
+//   let usersData = response.data;
+//   //   console.log(response);
 
+//   usersData.map((user) => {
+//     let html = ` <div class="user">
+//             <h1> ${user.first_name + " " + user.last_name} </h1>
+//             <h2> ${user.email}</h2>
+//             <img src=${user.avatar} alt="">
+//             </div>`;
+//     container.innerHTML += html;
+//   });
+// };
+
+// getData();
 
 // fetch("https://reqres.in/api/users?page=1")
 //     .then((response) => {

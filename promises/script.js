@@ -11,7 +11,9 @@
 
 //How to create  a promise?
 
-// const promise = new Promise(() => {});
+// const promise = new Promise((resolve, reject) => {
+//     reject("Promise is fullfilled");
+// });
 // console.log(promise);
 
 //promise is a constructor function that takes a callback function as an argument. The callback function takes two arguments, resolve and reject. These are methods used to determine the outcome of the promise.
@@ -23,9 +25,9 @@
 // let promise = new Promise((resolve, reject) => {
 //   let a = 1 + 5;
 //   if (a == 2) {
-//     resolve("Promise is a Success");
+//     resolve("Class is taken");
 //   } else {
-//     reject("Promise is Failed");
+//     reject("Class is not taken");
 //   }
 // });
 
@@ -36,11 +38,11 @@
 //then is a method that takes two optional arguments: a callback function for the success case.
 // console.log(promise);
 // promise.then((message)=>{
-//     console.log("This is in the then " + message);
-//     console.log("I want to eat pizza");
+//     console.log( message);
+//     console.log("I have to revise the class");
 // })
 // .catch((error)=>{
-//     console.log("This is in the catch " + error);
+//     console.log("He didn't took the session " + error);
 // })
 
 ///RESTRAUNT EXAMPLE = > Stimulating an async operation of cooking and serving food in a restraunt.
@@ -55,7 +57,7 @@
 //   });
 // };
 
-// // Time taking to serve the food on table
+// // // Time taking to serve the food on table
 
 // const serveFood = () => {
 //   return new Promise((resolve, reject) => {
@@ -79,32 +81,30 @@
 
 // console.log("I am ordering food");
 // //promise fullfilled
-// prepareFood().then((message) => {
-//   console.log(message);
-
-//   serveFood().then((message) => {
+// prepareFood()
+//   .then((message) => {
 //     console.log(message);
 
-//     eatingFood().then((message) => {
+//     serveFood().then((message) => {
+//       console.log(message);
+
+//       eatingFood().then((message) => {
 //         console.log(message);
 
 //         console.log("I am leaving the restaurant");
-//       })
+//       });
+//     });
+//   })
+//   .catch((error) => {
+//     console.log(error);
 //   });
 
-// })
-// .catch((error) => {
-//   console.log(error);
-// });
-
 //STATES OF PROMISE => Pending, Fullfilled, Rejected
-
 
 //Pending => Promise is pending => Not yet fullfilled or rejected
 
 // const promise = new Promise((resolve, reject) => {})
 // console.log(promise);
-
 
 //FUlfilled => Promise is fullfilled = > Completed successfully
 
@@ -119,13 +119,12 @@
 // });
 
 // console.log (promise);
+// // promise.then((message) => {console.log("Promise is ")})
 // promise.catch((message) => {
-//    throw new Error(message);
-//     console.error(message);
+// //    throw new Error(message);
+//     // console.error(message);
 //     console.log(message);
 // });
-
-
 
 //Promise.all => It takes an array of promises and returns a single promise. It is fullfilled when all the promises in the array are fullfilled. If any of the promises in the array is rejected, the promise returned by Promise.all is rejected.
 
@@ -136,7 +135,7 @@
 // })
 // const promise2 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         reject("Promise 2 is Rejected");
+//         resolve("Promise 2 is Rejected");
 //     }, 2000);
 // })
 // const promise3 = new Promise((resolve, reject) => {
@@ -144,7 +143,6 @@
 //         resolve("Promise 3 is fullfilled");
 //     }, 3000);
 // })
-
 
 // Promise.all([promise1, promise2, promise3])
 // .then((message)=>{
@@ -154,9 +152,7 @@
 //     console.log(error)
 // })
 
-
 //Promise.race => It takes an array of promises and returns a single promise. It is fullfilled or rejected as soon as one of the promises in the array is fullfilled or rejected.
-
 
 // const promise1 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
@@ -165,7 +161,7 @@
 // })
 // const promise2 = new Promise((resolve, reject) => {
 //     setTimeout(() => {
-//         reject("Promise 2 is Rejected");
+//         resolve("Promise 2 is Rejected");
 //     }, 500);
 // })
 // const promise3 = new Promise((resolve, reject) => {
@@ -180,12 +176,4 @@
 // })
 // .catch((error)=>{
 //     console.log(error)
-// })  
-
-
-
-
-
-
-
-
+// })

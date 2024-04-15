@@ -20,54 +20,55 @@
 
 //url = https://reqres.in/api/users?page=1
 
-// let btn = document.querySelector("button");
+let btn = document.querySelector("button");
 
-// btn.addEventListener("click", () => {
+//CAllback hell => It is a situation where the code is written in a nested manner and it becomes difficult to read and understand the code.
+btn.addEventListener("click", () => {
     
-//   fetch("https://reqres.in/api/users?page=1")
-//     .then((response) => {
-//       response.json().then((data) => {
-//         // console.log(data);
-//         // console.log(data.data[0]);
-//         // let userData = data.data[0];
+  fetch("https://reqres.in/api/users?page=1")
+    .then((response) => {
+      response.json().then((data) => {
+        console.log(data);
+        // console.log(data.data[0]);
+        // let userData = data.data[0];
 
-//         //Data of the first user
-//         // let firstName = userData.first_name;
-//         // let lastName = userData.last_name;
-//         // let email = userData.email;
-//         // let avatar = userData.avatar;
+        //Data of the first user
+        // let firstName = userData.first_name;
+        // let lastName = userData.last_name;
+        // let email = userData.email;
+        // let avatar = userData.avatar;
 
-//         // console.log(firstName, lastName);
+        // console.log(firstName, lastName);
 
-//         //         let container = document.querySelector(".container");
+        //         let container = document.querySelector(".container");
 
-//         //         container.innerHTML = ` <h1> ${firstName+" "+ lastName} </h1>
-//         //                                <h2> ${email}</h2>
-//         //                                <img src=${avatar} alt="">
-//         // `;
+        //         container.innerHTML = ` <h1> ${firstName+" "+ lastName} </h1>
+        //                                <h2> ${email}</h2>
+        //                                <img src=${avatar} alt="">
+        // `;
 
-//         let usersData = data.data;
-//         // console.log(usersData);
+        let usersData = data.data;
+        // console.log(usersData);
 
-//         usersData.map((user) => {
-//           let html = ` <div class="user">
-//             <h1> ${user.first_name + " " + user.last_name} </h1>
-//             <h2> ${user.email}</h2>
-//             <img src=${user.avatar} alt="">
-//             </div>`;
+        usersData.map((user) => {
+          let html = ` <div class="user">
+            <h1> ${user.first_name + " " + user.last_name} </h1>
+            <h2> ${user.email}</h2>
+            <img src=${user.avatar} alt="">
+            </div>`;
 
-//           let container = document.querySelector(".container");
+          let container = document.querySelector(".container");
 
-//           //   container.innerHTML = container.innerHTML + html;
+          //   container.innerHTML = container.innerHTML + html;
 
-//           container.innerHTML += html;
-//         });
-//       });
-//     })
-//     .catch((err) => {
-//       console.log("This is the error ", err);
-//     });
-// });
+          container.innerHTML += html;
+        });
+      });
+    })
+    .catch((err) => {
+      console.log("This is the error ", err);
+    });
+});
 
 // // console.log(fetch('https://reqres.in/api/users?page=1'));
 

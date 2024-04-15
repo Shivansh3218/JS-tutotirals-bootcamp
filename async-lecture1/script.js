@@ -58,11 +58,11 @@
 
 // setInterval => It is used to run a function after a certain amount of time repeatedly.
 
-// setInterval(()=>{
+setInterval(()=>{
 
-//     console.log("I am a setInterval function");
+    console.log("I am a setInterval function");
 
-// },1000)
+},1000)
 
 // let callbackFN = ()=>{
 //     console.log("I am a setInterval function");
