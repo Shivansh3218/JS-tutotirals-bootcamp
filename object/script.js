@@ -13,18 +13,21 @@ let book = {
 let bookListArr = [];
 
 addBookButton.addEventListener("click", function () {
+  let h1 = document.querySelector("h1");
+
+  h1.setAttribute("contenteditable", "true");
 
   book.name = bookNameInput.value;
   book.author = bookAuthorInput.value;
   book.price = bookPriceInput.value;
   //   console.log(book);
 
-  if (!book.name.length > 0 || !book.author.length > 0 || !book.price > 0) {
-    alert("Please fill all the fields");
-    return;
-  }
+  //   if (!book.name.length > 0 || !book.author.length > 0 || !book.price > 0) {
+  //     alert("Please fill all the fields");
+  //     return;
+  //   }
 
-  addTableRow();
+  //   addTableRow();
   bookListArr.push(book);
 
   console.log(bookListArr);
@@ -34,8 +37,10 @@ addBookButton.addEventListener("click", function () {
   bookListArr.map((book) => {
     let bookItem = document.createElement("li");
 
-    bookItem.innerHTML = `Book Name: <span id='bookName'>${book.name}</span> Author: <span id='bookAuthor'>${book.author}</span> Price: <span id='bookPrice'>${book.price}</span>`;
-
+    bookItem.innerHTML = `Book Name: <span contenteditable="true" id='bookName'>${book.name}</span> Author: <span id='bookAuthor'>${book.author}</span> Price: <span id='bookPrice'>${book.price}</span>`;
+    // bookItem.addEventListener("click", function () {
+    //     bookItem.setAttribute("contenteditable", "true")
+    //   });
     bookList.appendChild(bookItem);
   });
 });
@@ -47,7 +52,8 @@ function showBook() {
 
   let bookItem = document.createElement("li");
 
-  bookItem.innerHTML = `Book Name: <span id='bookName'>${book.name}</span> Author: <span id='bookAuthor'>${book.author}</span> Price: <span id='bookPrice'>${book.price}</span>`;
+  bookItem.innerHTML = `Book Name: <span id='bookName'>${book.name}</span> Author: <span id='bookAuthor'>${book.author}</span> Price: <span id='bookPrice'>${book.price}</span>
+  button: <button id='edit'>Edit</button> <button id='delete'>Delete</button>`;
 
   bookList.appendChild(bookItem);
 }
@@ -57,6 +63,7 @@ function addTableRow() {
   console.log(tbody);
 
   let tr = document.createElement("tr");
+
   tr.innerHTML = `
              <td>${book.name}</td>
              <td>${book.author}</td>
@@ -68,3 +75,12 @@ function addTableRow() {
   bookAuthorInput.value = "";
   bookPriceInput.value = "";
 }
+
+
+let btn =  document.getElementById("btn");
+
+// btn.addEventListener("click", callback);
+
+// function callback(){
+//   console.log("Button clicked");
+// }
