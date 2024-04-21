@@ -84,3 +84,48 @@
 //     console.log("This is a function hoisting")
 // }
 // sum()
+
+
+
+
+//The declarations are moved to the top of their scope. It is a JavaScript mechanism where variables and function declarations are moved to the top of their scope before code execution.
+
+// console.log(a); //usage
+// const a = 10
+// add = undefined
+// add()
+//  let add = function (){
+//     console.log("This is a function declaration")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
