@@ -168,15 +168,27 @@ function callback(result) {
 
 // console.log (sumArr);
 
+let promise = new Promise((resolve, reject) => {
+setTimeout(() => {
+  resolve("Promise is resolved");
+}, 2000);
+})
 
 
+setTimeout(() => {
+  console.log("I am the first one");
+}, 2000);
 
 
+promise.then((data) => {
+  console.log(data);
+})
 
 
-
-
-
+function first() {
+  console.log("First");
+}
+first()
 
 
 

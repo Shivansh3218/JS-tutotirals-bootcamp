@@ -164,7 +164,6 @@ if(value1===value2){
 }else{
   console.log("This is FALSE","This is used as a comma ");
 }
-
 //SWITCH STATEMENTS
 
 // let a = 4+4+5;
