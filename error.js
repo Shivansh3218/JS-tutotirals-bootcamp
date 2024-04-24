@@ -33,4 +33,27 @@
 // function throwError(){
     // throw new Error("This is an error");
 // }
+// throw new Error("This is an error");
 // throwError()
+
+
+//Try Catch Block, Finally = > {   }
+
+//try => block of code that might throw an error. Javscript attempts to execute this code normally
+// catch bock=> if an error or exception is thrown inside the try block it is handled in the catch block. This contains the exception code and provides info about the exception.
+
+//finally: => It is optional it is executed regardless the error occured. always will be executed.
+
+// console.log("Before try block");
+
+// try{
+//     // console.log(a);
+//     let a = 20;
+// } catch (error) {
+//     // console.log("Cannnot access a before initialization");
+//     console.log(error);
+// }
+// finally{
+//     console.log("this is successfully done")
+// }
+
