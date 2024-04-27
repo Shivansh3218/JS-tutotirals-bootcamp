@@ -2,43 +2,46 @@
 
 // console.log("Start");
 
-// const start2 = () => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("Start 2");
-//     }, 2000);
-//   });
-// };
+const start2 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Start 2");
+    }, 2000);
+    // throw new Error("This is an error");
+  });
+};
 
-// const start3 = () => {
-//   return new Promise((resolve, reject) => {
-//     setTimeout(() => {
-//       resolve("Start 3");
-//     }, 1000);
-//   });
-// };
-// start2.then((result) => {
+const start3 = () => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve("Start 3");
+    }, 1000);
+  });
+};
+
+// start2().then((result) => {
 //   console.log(result);
 
-//   start3.then((result) => {
+//   start3().then((result) => {
 //     console.log(result);
+
+//     console.log("End");
 //   });
 // });
-
-// console.log("End");
 
 //async = >> function= > Using this keyword you can make a function asynchronous.
 
 //await = >> promise= > Using this keyword you can wait for a promise to be resolved.
 
-// let race = async () => {
+// async function race() {
 //   console.log("Start");
+// //   console.log("Start 2", start2(), "this is pending in staart 2");
 //   let startMethod = await start2();
 //   let startMethod2 = await start3();
 //   console.log(startMethod);
 //   console.log(startMethod2);
 //   console.log("End");
-// };
+// }
 
 // race();
 
