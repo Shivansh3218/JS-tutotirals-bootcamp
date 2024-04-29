@@ -51,6 +51,7 @@ function counter() {
     count++;
   };
 }
+
 let incrementCounter = counter()
 console.log(counter())
 incrementCounter()
