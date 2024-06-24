@@ -11,12 +11,13 @@
 //     return this.name;
 //   },
 // };
-// // console.log(student.getName());
+// console.log(shivansh.getName());
 
 // let muktai = {
 //     name: "Muktai",
 //     class: 11,
 // }
+
 
 //call method
 
@@ -39,11 +40,16 @@
 //     return this.age;
 // }
 
+// // console.log(getAge.call(muktai)) //25
+
+
 // function getDetails(city, food){
 //     return this.name + " is from " + city+" likes "+ food;
 // }
 
-// console.log(getDetails.call(shivansh," Sringar", "mix veg")) //Shivansh is from Sringar
+// console.log(getDetails.call(shivansh,"Sringar", "mix veg")) //Shivansh is from Sringar
+
+// console.log(getDetails.call(muktai,"Pune", "Rajma")) //Muktai is from Jammu
 
 //error
 // console.log(shivansh.getAge())
@@ -55,32 +61,32 @@
 
 //apply methhod is used to call a method of an object with another object as an argument. The only difference between call and apply is that call takes arguments separately whereas apply takes arguments as an array.
 
-let shivansh = {
-  name: "Shivansh",
-  class: 10,
-  age: 25,
-};
+// let shivansh = {
+//   name: "Shivansh",
+//   class: 10,
+//   age: 25,
+// };
 
-let muktai = {
-  name: "Muktai",
-  class: 12,
-  age: 26,
-  getDetails: function (city, food) {
-    return this.name + " is from " + city + " likes " + food;
-  },
-};
+// let muktai = {
+//   name: "Muktai",
+//   class: 12,
+//   age: 26,
+//   getDetails: function (city, food) {
+//     return this.name + " is from " + city + " likes " + food;
+//   },
+// };
 
 //  muktai.getDetails.apply(shivansh, ["Jammu", "Rajma"]);
 
 
 //bind method is used to bind a method to an object. It returns a new function that can be called later.
 
-const shivanshDetails = muktai.getDetails.bind(shivansh, "Jammu", "Rajma");
+// const shivanshDetails = muktai.getDetails.bind(shivansh, "Jammu", "Rajma");
 
 // const shivanshCall = muktai.getDetails.call(shivansh, "Jammu", "Rajma");
 
 // console.log(shivanshCall)
-console.log(shivanshDetails());
+// console.log(shivanshDetails());
 
 
 //Difference between call apply and Bind

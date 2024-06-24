@@ -30,6 +30,8 @@ let button = document.querySelector("button");
 
 //throttling => It is used to limit the number of times a function can be called over time. It is used to improve the performance of the application.
 
+//NOT OPTIMIZED LOGIC FOR THROTTELING PLEASE REFER THE ABOVE EXAMPLE THIS IS JUST FOR EXPLANATION
+
 function fire() {
     
   button.disabled = false;

@@ -52,7 +52,7 @@
 // }
 
 //Regular function
-
+// 
 // function updateUserName(user,property,value){
 //    return user[property] = value;
 // }
@@ -86,7 +86,7 @@
 //Triple each element find out the even elements and return the sum of those in a single value
 // let arr = [141, 2123, 3, 421, 135, 63, 713,18, 91, 120];
 
-// //function chaining
+// // //function chaining
 // let newVal =  arr.map((val)=> val*3).filter(val=>val%2==0).reduce((acc, curr)=>{
 // return acc+curr
 // },0)

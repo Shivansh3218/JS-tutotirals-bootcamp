@@ -260,7 +260,7 @@
 
 
 
-//Rest Operator: It is used to combine the values of into an array.(bundle); syntax = > ...arr Desctructuring
+//Rest Operator: It is used to combine the values into an array.(bundle); syntax = > ...arr Desctructuring
 
 // let a = 1
 // let b = 2;
